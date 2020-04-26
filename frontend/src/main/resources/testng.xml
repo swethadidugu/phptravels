@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="PHPTravels" verbose="1" >
+
+    <test name="HotelTests">
+        <classes>
+            <class name="TestClasses.Hotels_Tests"/>
+        </classes>
+    </test>
+</suite>
