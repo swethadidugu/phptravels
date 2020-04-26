@@ -1,6 +1,6 @@
 package pageobjects;
 
-import com.sun.istack.internal.NotNull;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.SeleniumUtils;
 
+import javax.validation.constraints.NotNull;
 import java.lang.String;
 import java.util.Arrays;
 import java.util.Collections;
@@ -32,7 +33,7 @@ public class Hotel_BookingPage {
     public static By phoneNumber = By.xpath("//div[@class='col-md-6']//input[@type='text' and @id='phone_number']");
     public static By completeBooking = By.xpath("//form[@method='post']//button[@type='submit' and text()='Complete Booking']");
 
-    public static Boolean verifyDates(@NotNull WebDriver driver,@NotNull String checkin,@NotNull String checkout) {
+    public static Boolean verifyDates(@NotNull WebDriver driver, @NotNull String checkin, @NotNull String checkout) {
         List<String> inputCheckin= Arrays.asList(checkin.split("/"));
         List<String> inputCheckout=Arrays.asList(checkout.split("/"));
         List<String> actualCheckin=Arrays.asList(driver.findElements(dateList).get(0).getText().split("-"));

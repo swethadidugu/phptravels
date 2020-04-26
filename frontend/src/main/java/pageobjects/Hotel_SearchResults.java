@@ -1,12 +1,14 @@
 package pageobjects;
 
-import com.sun.istack.internal.NotNull;
+
 import java.lang.String;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.SeleniumUtils;
+
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 /**

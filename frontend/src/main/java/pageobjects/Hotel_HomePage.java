@@ -1,6 +1,5 @@
 package pageobjects;
 
-import com.sun.istack.internal.NotNull;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -11,6 +10,7 @@ import utils.SeleniumUtils;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+import javax.validation.constraints.NotNull;
 
 /**
  * Created by sweth on 4/18/2020.
@@ -41,7 +41,7 @@ public class Hotel_HomePage {
         wait.until(ExpectedConditions.visibilityOfElementLocated(Hotel_SearchResults.hotelsHeader));
         return driver.findElement(Hotel_SearchResults.hotelsHeader).isDisplayed();
         }
-    public static void login(@NotNull WebDriver driver, @NotNull String city, String country,@NotNull String checkin,@NotNull String checkout, int adultCount, int childCount) {
+    public static void login(@NotNull WebDriver driver, @NotNull String city, String country, @NotNull String checkin, @NotNull String checkout, int adultCount, int childCount) {
         WebDriverWait wait = new WebDriverWait(driver, 30);
         Actions action = new Actions(driver);
         wait.until(ExpectedConditions.visibilityOfElementLocated(destination));

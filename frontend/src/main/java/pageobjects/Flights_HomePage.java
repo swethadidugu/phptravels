@@ -1,12 +1,13 @@
 package pageobjects;
 
-import com.sun.istack.internal.NotNull;
+
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.SeleniumUtils;
 
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 /**
@@ -36,7 +37,7 @@ public class Flights_HomePage {
     public static By infantActualCount = By.xpath("//div[@class='col-4']//input[@type='text' and @name='finfant']");
 
 
-    public static Boolean flightSearch(@NotNull WebDriver driver, @NotNull String tripType, @NotNull String flightClass, @NotNull String from,@NotNull String to, @NotNull String dateFrom, String dateTo, int adultCount, int childCount, int infantCount) {
+    public static Boolean flightSearch(@NotNull WebDriver driver, @NotNull String tripType, @NotNull String flightClass, @NotNull String from, @NotNull String to, @NotNull String dateFrom, String dateTo, int adultCount, int childCount, int infantCount) {
         WebDriverWait wait = new WebDriverWait(driver,30);
         Actions action = new Actions(driver);
         driver.findElement(flightsTab).click();
